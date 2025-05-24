@@ -1,0 +1,164 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f9fafb, #e0e7ff);
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  padding: 30px;
+  max-width: 1200px; 
+  margin: 20px auto; 
+}
+
+.apps-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px; 
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apps-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.apps-item img {
+  width: 60px; 
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  object-fit: cover;
+  vertical-align: middle;
+  object-position: center;
+  border: 2px solid #ddd;
+  flex-shrink: 0;
+}
+
+.apps-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.apps-info a {
+  font-weight: 600;
+  color: #005eff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.apps-info a:hover {
+  text-decoration: underline;
+}
+
+.publisher {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.rating .star {
+  color: #ffa500;
+}
+
+.rating .rating-value {
+  font-weight: 500;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.5rem;
+  color: red;
+  padding: 20px;
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .apps-grid {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    padding: 20px;
+  }
+  .apps-item {
+    padding: 18px; 
+  }
+  .apps-item img {
+    width: 65px; 
+    height: 65px;
+  }
+  .apps-info a {
+    font-size: 17px; 
+  }
+  .publisher, .rating {
+    font-size: 15px; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .apps-grid {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    padding: 10px;
+  }
+  .apps-item {
+    padding: 12px; 
+    gap: 10px;
+  }
+  .apps-item img {
+    width: 45px;
+    height: 45px;
+  }
+  .apps-info a {
+    font-size: 14px; 
+  }
+  .publisher, .rating {
+    font-size: 12px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .apps-grid {
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 15px; 
+    padding: 10px;
+  }
+  .apps-item {
+    flex-direction: row; 
+    text-align: left;
+    gap: 15px;
+    padding: 15px;
+  }
+  .apps-item img {
+    width: 70px; 
+    height: 70px;
+    margin-bottom: 0;
+  }
+  .apps-info a {
+    font-size: 18px; 
+  }
+  .publisher, .rating {
+    font-size: 16px; 
+  }
+}

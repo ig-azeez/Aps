@@ -1,0 +1,135 @@
+
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #eaf6ff, #e2dbf7); 
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; 
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box; 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1d4ed8; 
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2); 
+}
+
+.login-button-submit {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 20px; 
+  box-shadow: 0 4px 10px rgba(29, 78, 216, 0.3);
+}
+
+.login-button-submit:hover {
+  background-color: #1a43b8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(29, 78, 216, 0.4);
+}
+
+.login-links {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.login-links a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+  color: #1a43b8;
+}
+
+.separator {
+  margin: 0 10px;
+  color: #cbd5e0;
+}
+
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+  .login-title {
+    font-size: 2rem;
+  }
+  .login-subtitle {
+    font-size: 1rem;
+  }
+  .form-group input {
+    padding: 10px 12px;
+  }
+  .login-button-submit {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+  .login-links {
+    font-size: 0.85rem;
+  }
+}
